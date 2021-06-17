@@ -1,0 +1,64 @@
+﻿<Window x:Class="Lab3_WPF_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab3_WPF_"
+        mc:Ignorable="d"
+        Title="Broken line painter" Height="500" Width="700">
+
+    <Grid>
+
+        <Canvas x:Name="MyCanvas" Background="AntiqueWhite" 
+                MouseDown="MyCanvas_MouseDown" MouseUp="MyCanvas_MouseUp" 
+               DockPanel.Dock="Bottom" Margin="0,80,0,0">
+        </Canvas>
+
+        <ToolBar Height="70" Margin="0,0,0,400" Background="BlueViolet">
+
+            <Separator MinWidth="80" Background="BlueViolet"></Separator>
+            
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button Name="saveBtn" VerticalAlignment="Center"  HorizontalAlignment="Center" Click="OnClickSaveBtn" 
+                        Background="Transparent" BorderThickness="0">
+
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/pictures/save.png" Height="50" Width="50"  />
+
+                    </StackPanel>
+
+                </Button>
+            </StackPanel>
+
+            <Separator MinWidth="170" Background="BlueViolet"></Separator>
+
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <Button Name="undoBtn" VerticalAlignment="Center" Click="OnClickUndoBtn" Background="Transparent"
+                        BorderThickness="0">
+                    <Image Source="pictures\undo.png" Height="50" Width="50" RenderTransformOrigin="0.782,0.546"  ></Image>
+                </Button>
+
+            </StackPanel>
+
+            <Separator MinWidth="170" Background="BlueViolet"></Separator>
+
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button Name="cleanAll" VerticalAlignment="Center"  HorizontalAlignment="Center"
+                        Click="OnClickCleanAll" Background="Transparent" BorderThickness="0" >
+
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="/pictures/soap.png" Height="50" Width="50"  />
+
+                    </StackPanel>
+
+                </Button>
+            </StackPanel>
+
+
+        </ToolBar>
+
+    </Grid>
+
+</Window>
